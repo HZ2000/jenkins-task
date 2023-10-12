@@ -1,0 +1,5 @@
+com/haykz/inventoryservice/model/Inventory.class
+com/haykz/inventoryservice/service/InventoryService.class
+com/haykz/inventoryservice/controller/InventoryController.class
+com/haykz/inventoryservice/repository/InventoryRepository.class
+com/haykz/inventoryservice/InventoryServiceApplication.class

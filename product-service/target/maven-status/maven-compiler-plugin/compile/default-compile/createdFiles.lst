@@ -1,0 +1,10 @@
+com/haykz/productservice/dto/ProductRequest.class
+com/haykz/productservice/dto/ProductResponse.class
+com/haykz/productservice/controller/ProductController.class
+com/haykz/productservice/service/ProductService.class
+com/haykz/productservice/model/Product.class
+com/haykz/productservice/dto/ProductResponse$ProductResponseBuilder.class
+com/haykz/productservice/ProductServiceApplication.class
+com/haykz/productservice/model/Product$ProductBuilder.class
+com/haykz/productservice/dto/ProductRequest$ProductRequestBuilder.class
+com/haykz/productservice/repository/ProductRepository.class
