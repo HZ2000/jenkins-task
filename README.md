@@ -3,9 +3,9 @@
 User Credentials:
 
 Admin User:
-Login - admin
+Login - admin,
 Password - admin123
 
 Developer User Credentials:
-Login - developer
+Login - developer,
 Password - developer
