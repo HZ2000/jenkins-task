@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Deploying to Tomcat...'
                 script {
-                    def container = tomcat(
+                    def container = tomcat9(
                                     credentialsId: 'tomcat-cred', // The ID of your Tomcat credentials in Jenkins
                                     url: 'http://localhost:7070', // The URL of your Tomcat server
                                     path: '/Microservices-new', // The context path for your application,
