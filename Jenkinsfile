@@ -42,7 +42,7 @@ pipeline {
                     if (warFile != null) {
                         echo "Deploying ${warFile} to Tomcat..."
 
-                        def tomcat = tomcat(credentialsId: "${env.TOMCAT_CREDENTIALS}", url: "${env.TOMCAT_URL}")
+                        def tomcat = tomcat9(credentialsId: "${env.TOMCAT_CREDENTIALS}", url: "${env.TOMCAT_URL}")
                         tomcat.deploy contextPath: '/your-app', war: warFile
                     } else {
                         error 'No WAR file found to deploy!'
