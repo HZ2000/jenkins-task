@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        TOMCAT_URL = 'http://localhost:7070'  // URL of your Tomcat server
-        TOMCAT_CREDENTIALS = credentials('tomcat-cred')  // Jenkins credentials ID for Tomcat
-    }
-
     tools {
         maven 'Maven-3.9.5'
     }
@@ -43,7 +38,7 @@ pipeline {
             }
 
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', url: '${env.TOMCAT_URL}')], contextPath: '/product-service', war: 'product-service/target/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', url: 'http://localhost:7070')], contextPath: '/product-service', war: 'product-service/target/*.war'
             }
         }
     }
