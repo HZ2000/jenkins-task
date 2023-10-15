@@ -33,7 +33,7 @@ pipeline {
 
         stage('Archieve Artifacts') {
             steps {
-                archiveArtifacts artifacts: '${JENKINS_HOME}/workspace/Task_Final/product-service/target/*.war'
+                archiveArtifacts artifacts: 'product-service/target/*.war'
             }
         }
 
@@ -43,7 +43,7 @@ pipeline {
             }
 
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', url: '${env.TOMCAT_URL}')], contextPath: '/product-service', war: '${JENKINS_HOME}/workspace/Task_Final/product-service/target/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', url: '${env.TOMCAT_URL}')], contextPath: '/product-service', war: 'product-service/target/*.war'
             }
         }
     }
