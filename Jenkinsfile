@@ -37,17 +37,7 @@ pipeline {
             }
 
             steps {
-                script {
-                    def warFile = "${JENKINS_HOME}/workspace/Task_Final/product-service/target/*.war"
-                    if (warFile != null) {
-                        echo "Deploying ${warFile} to Tomcat..."
-
-                        def tomcat = tomcat9(credentialsId: "${env.TOMCAT_CREDENTIALS}", url: "${env.TOMCAT_URL}")
-                        tomcat.deploy contextPath: '/your-app', war: warFile
-                    } else {
-                        error 'No WAR file found to deploy!'
-                    }
-                }
+                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', url: '${env.TOMCAT_URL}')], contextPath: '/product-service', war: '${JENKINS_HOME}/workspace/Task_Final/product-service/target/*.war'
             }
         }
     }
