@@ -32,7 +32,9 @@ pipeline {
         }
 
         stage('Archieve Artifacts') {
-            archiveArtifacts artifacts: '${JENKINS_HOME}/workspace/Task_Final/product-service/target/*.war'
+            steps {
+                archiveArtifacts artifacts: '${JENKINS_HOME}/workspace/Task_Final/product-service/target/*.war'
+            }
         }
 
         stage('Deploy to Tomcat') {
