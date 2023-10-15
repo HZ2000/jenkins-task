@@ -37,7 +37,7 @@ pipeline {
             }
 
             steps {
-                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', url: '${env.TOMCAT_URL}')], contextPath: '/product-service', war: '${JENKINS_HOME}/workspace/Task_Final/product-service/target/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', url: '${env.TOMCAT_URL}')], contextPath: '/product-service', war: '${JENKINS_HOME}/workspace/Task_Final/product-service/target/product-service-1.0-SNAPSHOT.war'
             }
         }
     }
