@@ -38,7 +38,7 @@ pipeline {
                                     url: 'http://localhost:7070', // The URL of your Tomcat server
                                     path: '/Microservices-new', // The context path for your application,
                                     message: 'Custom Message', // Custom message for the deployment
-                                    war: "${JENKINS_HOME}/workspace/Task_Final/target/Microservices-new.war" // Path to the WAR file built by your job
+                                    war: "${JENKINS_HOME}/workspace/Task_Final/product-service/target/product-service-1.0-SNAPSHOT.war" // Path to the WAR file built by your job
                     )
                     container.deploy()
                 }
